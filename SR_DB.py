@@ -14,6 +14,8 @@ text = r.recognize_google(audio)
 
 if "multiply" in text:
     text = text.replace('multiply' , '*')
+if 'divided by' in text:
+    text = text.replace('divided by' , '/')
 if "plus" in text:
     text = text.replace('plus' , '+')
 if 'X' in text:
@@ -24,8 +26,7 @@ if 'minus' in text:
     text = text.replace('minus' , '-')
 if 'one' in text:
     text = text.replace('one' , '1')
-if 'divided by' in text:
-    text = text.replace('divided by' , '/')
+
 print (text)
 
 val=eval(text)
