@@ -209,14 +209,6 @@ data = {
 }
 ```
 
-# Output Samples:
-
-### Ouput1
-![Ouput1]()
-
-### Ouput2
-![Ouput2]()
-
 
 ## Preview 
 Watch the video:
