@@ -43,17 +43,18 @@ And of course we used it in our project!
 ```python
 import speech_recognition as sr
 ```
-# Python GUI Programming With Tkinter
+## Python GUI Programming With Tkinter
+
 Python has a lot of GUI frameworks, but Tkinter is the only framework that’s built into the Python standard library. Tkinter has several strengths. It’s cross-platform, so the same code works on Windows, macOS, and Linux. Visual elements are rendered using native operating system elements, so applications built with Tkinter look like they belong on the platform where they’re run.
 
 ### How We Create Our Calculator Windows?
-1. The first and important step is download the Tkinter package
+#### 1. The first and important step is download the Tkinter package
 
 ```python
 from tkinter import*
 ```
 
-2. Create a new window and assign it to variable
+#### 2. Create a new window and assign it to variable
 ```python
 # Creating tkinter window
 me=Tk()
@@ -61,7 +62,7 @@ me=Tk()
 # Execute Tkinter
 me.mainloop()
 ```
-3. Customize the windows size, title and background 
+#### 3. Customize the windows size, title and background 
 ```python
 # Windows title
 me.title("CALCULATOR")
@@ -72,7 +73,32 @@ me.geometry('354x460')
 # Windows background 
 me.config(background='Dark gray')
 ```
-and There is alot of datail you can discover them using this link
+#### Object Oriented Principle
+#### 4. Set an icon for the window
+we create a class that contains creation() method to create the icon 
+``` 
+class Image:
+    def __init__(self, path):
+        self.path = path
+
+    def creaticon(self):
+        # Tkinter PhotoImage method to display the icon 
+        p1 = PhotoImage(file=self.path)
+        # Icon set for the window
+        me.iconphoto(False, p1)
+
+```
+Creating object of class Image then calling creation() function
+```
+# path of the icon will be send throgh image class constructor 
+icon = Image("1280px-Qassim_University_logo.svg.png")
+icon.creaticon()
+```
+**Note:** path of the image will be changed to the path of image in your folder
+
+
+
+There is alot of datail you can discover them using this link
 [Tkinter](https://www.geeksforgeeks.org/python-gui-tkinter/)
 
 # Import value From Another Python's File
@@ -124,6 +150,7 @@ if 'minus' in text:
 if 'one' in text:
     text = text.replace('one' , '1')
 ```
+
 
 # Database Connection
 After calculating result you need to store it in the database inorder to retraivet later.
