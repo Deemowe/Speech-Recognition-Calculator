@@ -212,4 +212,4 @@ data = {
 
 ## Preview 
 Watch the video:
-[![Watch the video](https://img.youtube.com/vi/ZDJetbxlhOY/maxresdefault.jpg)](https://www.youtube.com/watch?v=ZDJetbxlhOY)
+[![Watch the video](https://img.youtube.com/vi/zSu5jz465mk/maxresdefault.jpg)](https://youtu.be/zSu5jz465mk)
