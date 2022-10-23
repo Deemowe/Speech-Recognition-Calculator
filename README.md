@@ -139,6 +139,8 @@ We remind you that the **eval() method** only allows numbers and symbols as stri
  ```python
 if "multiply" in text:
     text = text.replace('multiply' , '*')
+if 'divided by' in text:
+    text = text.replace('divided by' , '/')
 if "plus" in text:
     text = text.replace('plus' , '+')
 if 'X' in text:
