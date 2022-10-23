@@ -114,7 +114,7 @@ Since Python is a powerful language, we can perform this process with the statem
 from SR_DB import val
 ```
 
-# Problems & Solutions 
+# Problem & Solution
 * Expression evaluation
 Since the device cannot evaluate the arithmetic expression directly like a human, several steps are required.
 1. [Convert the infix expression to a postfix expression](https://favtutor.com/blogs/infix-to-postfix-conversion)
@@ -198,7 +198,7 @@ mycursor.execute(sql, val)
 
 **Instead use a dictionary to store the value that will be inserted then us it in insert into.**
 
-```sql
+```python
 val = 20
 add = ("INSERT INTO Result "
        "(Expression,CalResult) "
