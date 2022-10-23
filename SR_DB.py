@@ -33,12 +33,10 @@ val=eval(text)
 
 cursor = conn.cursor()
 add = ("INSERT INTO Result "
-       "(CalResult) "
-       "VALUES (%(v)s)")
+       "(Expression,CalResult) "
+       "VALUES (%(t)s , %(v)s)")
 
-data = {
-    'v': str(val)
-}
+data = {'v': str(val),'t': str(text)}
 
 cursor.execute(add, data)
 conn.commit()
