@@ -200,13 +200,11 @@ mycursor.execute(sql, val)
 
 ```sql
 val = 20
-add = ("INSERT INTO test "
-       "(result) "
-       "VALUES (%(v)s)")
+add = ("INSERT INTO Result "
+       "(Expression,CalResult) "
+       "VALUES (%(t)s , %(v)s)")
 
-data = {
-    'v': str(val)
-}
+data = {'v': str(val),'t': str(text)}
 ```
 
 
