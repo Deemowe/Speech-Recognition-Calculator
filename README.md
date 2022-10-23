@@ -1,21 +1,20 @@
 
-# Speech Recognition Calculator Using Python
+# Speech Recognition Calculator with Python
 ### What is Speech Recognition ?
-Speech recognition is a machine's ability to listen to spoken words and identify them. You can then use speech recognition in Python to convert the spoken words into text, make a query or give a reply. You can even program some devices to respond to these spoken words.
+Speech recognition is the ability of a machine to listen to spoken words and identify them. You can then use speech recognition in Python to convert the spoken words into text, make a request, or give a response. You can even program some devices to respond to these spoken words.
 
 In addition:
- - Speech Recognition incorporates computer science and linguistics to identify spoken words and converts them into text. It allows computers to understand human language.
-
--  It is an important feature in several applications used such as home automation, artificial intelligence, etc.
+ - Speech recognition uses computer science and linguistics to identify spoken words and convert them into text. It enables computers to understand human speech.
+ - It is an important feature in several applications used such as home automation, artificial intelligence, etc.
 
 ![IMAGE1](https://user-images.githubusercontent.com/74800962/196057225-600d7b1e-516b-4733-865b-1a84f64a061a.jpg)
 
 
-So, the main idea and  goeal of our project is to recognise your voice as input to perform basic operations then show the result in GUI'S Calculator.
+So the main idea and goal of our project is to recognize your voice as input to perform basic operations and display the result in a GUI computer.
 
-### Recognizing Speech Requires:
-  1. Install Speech Recognition package.
-  2. Import the package in your Python project.
+### Speech Recognition Requires:
+  1. Install the speech recognition package.
+  2. Import the package into your Python project.
   3. Transmit an audio input.
 
 # Speech Recognition packages in Python
@@ -35,9 +34,9 @@ In some compilers like *intillj* you can download yours packages directly.
 
 There is one package that stands out in terms of ease-of-use: **SpeechRecognition**.
 
-Wich makes retrieving the input really easy. Instead of having to build scripts for accessing microphones and processing audio files from scratch, SpeechRecognition will have you up and running in just a few minutes.
+Wich makes retrieving the input really easy. Instead of having to create scripts from scratch to access microphones and process audio files, SpeechRecognition lets you get started in just a few minutes.
 
-And of course we used it in our project!
+And of course, we used it in our project!
 
 
 ```python
@@ -45,10 +44,10 @@ import speech_recognition as sr
 ```
 ## Python GUI Programming With Tkinter
 
-Python has a lot of GUI frameworks, but Tkinter is the only framework that’s built into the Python standard library. Tkinter has several strengths. It’s cross-platform, so the same code works on Windows, macOS, and Linux. Visual elements are rendered using native operating system elements, so applications built with Tkinter look like they belong on the platform where they’re run.
+Python has a lot of GUI frameworks, but Tkinter is the only framework that's integrated with the Python standard library. Tkinter has several strengths. It's cross-platform, so the same code works on Windows, macOS and Linux. Visual elements are rendered using native operating system elements, so applications built with Tkinter look like they belong on the platform they're running on.
 
-### How We Create Our Calculator Windows?
-#### 1. The first and important step is download the Tkinter package
+### How Do We Create Our Calculator Windows?
+#### 1. The first and most important step is to download the Tkinter package
 
 ```python
 from tkinter import*
@@ -62,7 +61,7 @@ me=Tk()
 # Execute Tkinter
 me.mainloop()
 ```
-#### 3. Customize the windows size, title and background 
+#### 3. Customize the window size, title and background 
 ```python
 # Windows title
 me.title("CALCULATOR")
@@ -73,10 +72,10 @@ me.geometry('354x460')
 # Windows background 
 me.config(background='Dark gray')
 ```
-#### Object Oriented Principle
-#### 4. Set an icon for the window
-we create a class that contains creation() method to create the icon 
-``` 
+# Object Oriented Principle
+1. Set an icon for the window
+we create a class that contains the creation() method to create the icon 
+```python
 class Image:
     def __init__(self, path):
         self.path = path
@@ -88,35 +87,36 @@ class Image:
         me.iconphoto(False, p1)
 
 ```
-Creating object of class Image then calling creation() function
-```
+2. Creating an object of the Image class and then calling the creation() function
+```python
 # path of the icon will be send throgh image class constructor 
 icon = Image("1280px-Qassim_University_logo.svg.png")
 icon.creaticon()
 ```
-**Note:** path of the image will be changed to the path of image in your folder
+**Note:** The path of the image is changed according to the location of the image on your device
 
 
 
-There is alot of datail you can discover them using this link
+There is a lot of data that you can discover through this link!
 [Tkinter](https://www.geeksforgeeks.org/python-gui-tkinter/)
 
 # Import value From Another Python's File
-In this project there are two files:
+There are two files in this project:
 1. **Speech_recognition file (SR_DB)**
-Wich contain the evaluation exepretion and data base connection 
+Which contains the evaluation expression and the database connection.
 
 2. **GUI file (GUI)**
 <br>
 
-So, we want to use the value of file **SR_DB** wich is the result of exepretion and used it in file **GUI**, because Python is powerful language we can do this process using **import** statement
+So we want to use the value of the **SR_DB** file, which is the result of the expression, in the **GUI** file. 
+Since Python is a powerful language, we can perform this process with the statement **import**.
 ```python
 from SR_DB import val
 ```
 
 # Problems & Solutions 
-* Exepretion evaluation
-Because the device cannot evaluate the arithmetic exepretion directly like human, it's requires many steps
+* Expression evaluation
+Since the device cannot evaluate the arithmetic expression directly like a human, several steps are required.
 1. [Convert the infix exepretion to  postfix exepretion](https://favtutor.com/blogs/infix-to-postfix-conversion)
 2. [Evaluate the postfix exepretion usin the precedent of operations](https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/)
 <br>
@@ -190,7 +190,7 @@ conn.commit()
 ```
 **NOTE:** By using phpMyAdmin an error may ocurr if you use the fllowing insertion statment 
 
-```sql
+```python
 sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
 val = ("John", "Highway 21")
 mycursor.execute(sql, val)
