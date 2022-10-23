@@ -42,6 +42,7 @@ And of course, we used it in our project!
 ```python
 import speech_recognition as sr
 ```
+# Object Oriented Principle
 ## Python GUI Programming With Tkinter
 
 Python has a lot of GUI frameworks, but Tkinter is the only framework that's integrated with the Python standard library. Tkinter has several strengths. It's cross-platform, so the same code works on Windows, macOS and Linux. Visual elements are rendered using native operating system elements, so applications built with Tkinter look like they belong on the platform they're running on.
@@ -72,8 +73,7 @@ me.geometry('354x460')
 # Windows background 
 me.config(background='Dark gray')
 ```
-# Object Oriented Principle
-1. Set an icon for the window
+#### 4. Set an icon for the window
 we create a class that contains the creation() method to create the icon 
 ```python
 class Image:
@@ -87,7 +87,7 @@ class Image:
         me.iconphoto(False, p1)
 
 ```
-2. Creating an object of the Image class and then calling the creation() function
+#### 5. Creating an object of the Image class and then calling the creation() function
 ```python
 # path of the icon will be send throgh image class constructor 
 icon = Image("1280px-Qassim_University_logo.svg.png")
@@ -172,7 +172,6 @@ The following steps are required to connect SQL with Python:
   4- Connct your databse with python and write insert statment as the following code:
 
 ```python
-from mysql.connector import cursor
 import mysql.connector
 
 conn = mysql.connector.connect(
@@ -184,7 +183,7 @@ aadd = ("INSERT INTO Result "
        "VALUES (%(t)s , %(v)s)")
 
 data = {'v': str(val),'t': str(text)}
-}
+
 
 cursor.execute(add, data)
 conn.commit()
@@ -192,12 +191,12 @@ conn.commit()
 **NOTE:** By using phpMyAdmin an error may ocurr if you use the fllowing insertion statment 
 
 ```python
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
-val = ("John", "Highway 21")
-mycursor.execute(sql, val)
+sql = "INSERT INTO Result (Expression,CalResult) VALUES (%s, %s)"
+vaules = (text, val)
+mycursor.execute(sql, vaules)
 ```
 
-**Instead use a dictionary to store the value that will be inserted then us it in insert into.**
+**Instead, store the values in a dictionary then use it in INSERT INTO statment**
 
 ```python
 val = 20
