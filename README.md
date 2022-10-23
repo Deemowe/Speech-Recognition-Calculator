@@ -177,12 +177,11 @@ conn = mysql.connector.connect(
     host="localhost", user="root", password="", database="calculator")
 
 cursor = conn.cursor()
-add = ("INSERT INTO test "
-       "(result) "
-       "VALUES (%(v)s)")
+aadd = ("INSERT INTO Result "
+       "(Expression,CalResult) "
+       "VALUES (%(t)s , %(v)s)")
 
-data = {
-    'v': str(val)
+data = {'v': str(val),'t': str(text)}
 }
 
 cursor.execute(add, data)
