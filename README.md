@@ -117,24 +117,24 @@ from SR_DB import val
 # Problems & Solutions 
 * Expression evaluation
 Since the device cannot evaluate the arithmetic expression directly like a human, several steps are required.
-1. [Convert the infix exepretion to  postfix exepretion](https://favtutor.com/blogs/infix-to-postfix-conversion)
-2. [Evaluate the postfix exepretion usin the precedent of operations](https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/)
+1. [Convert the infix expression to a postfix expression](https://favtutor.com/blogs/infix-to-postfix-conversion)
+2. [Evaluating the postfix expression using the precedent of operations](https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/)
 <br>
-At first we thought that we must create code from those step to have the result like other Programming language!, but as we say Python is powerful language It can shorten hundreds of lines with one line by using **eval() method**
+At first we thought that we need to create code from these steps to get the result as in other programming languages, but as we say, Python is a powerful language that can shorten hundreds of lines with one line using the **eval() method**
 
 ```python
 val=eval(text)
 ```
 
-* Misunderstanding some words
-During speech recognition process some words don't write as we expect
-for example:
-1. You want to say ' 1 + 1', but it's translate as 'one plus one'
-2. You want to say ' 2 * 5',  but it's translate as '2 X 5' 
+* Misunderstandings with some words
+During the speech recognition process, some words are not spelled the way we expect, for example:
 
-We will remember you that the **eval() method** onle except numbers and symbols as string,so any other symbols or words are not allows and will produce error.
+1. You want to say ' 1 + 1', but it is translated as 'one plus one'
+2. You want to say ' 2 * 5', but it is translated as '2 X 5' 
+
+We remind you that the **eval() method** only allows numbers and symbols as strings, so any other symbols or words are not allowed and will produce an error.
  ## replace() method
- Use **replace() method** To ensure that the **eval() method** takes correct values
+ Use the **replace() method** to ensure that the **eval() method** takes correct values
 
  ```python
 if "multiply" in text:
@@ -153,8 +153,8 @@ if 'one' in text:
 
 
 # Database Connection
-After calculating result you need to store it in the database inorder to retraivet later.
-To create a connection between the MySQL database and Python, the connect() method of mysql.connector module is used. We pass the database details like HostName, username, and the password in the method call, and then the method returns the connection object.
+After calculating the result you need to store it in the database inorder to retrieve later. 
+To create a connection between the MySQL database and Python, the connect() method of mysql.connector module is used. We pass the database details like HostName, username, and password in the method call, and then the method returns the connection object.
 
 The following steps are required to connect SQL with Python:
 
